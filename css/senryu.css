@@ -1,0 +1,257 @@
+body {
+    font-size: 20px;
+    background-color: #FFFAF0; /* 薄いオレンジ色 */
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+
+.senryu-container {
+    display: flex;
+    flex-direction: column; /* スマホでは縦並び */
+    align-items: center;
+    text-align: center;
+}
+
+.senryu-image a {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.senryu-image img {
+    width: 30%; /* 画像を画面の30%に */
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* 文字色はお好みで */
+    writing-mode: vertical-rl;
+    font-size: larger;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+@media (max-width: 768px) {
+    .senryu-container {
+        flex-direction: column;
+    }
+    .senryu-image img {
+        width: 60%; /* スマホでは画像を大きく表示 */
+    }
+}
+
+
+/* 縦書きテキストのスタイル */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+
+
+header{
+    background-color: #fba32f; /* オレンジ */
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+ 
+ 
+}
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
+    display: block;
+    width: 35px; /* アイコンの幅 */
+    height: 5px; /* アイコンの高さ */
+    margin: 6px 0; /* 線と線の間の距離 */
+    background-color: #333; /* アイコンの色 */
+    transition: all 0.3s ease; /* アニメーションのための設定 */
+  }
+  
+
+#hamburger-icon {
+    cursor: pointer;
+    padding: 15px;
+    display: inline-block;
+}
+
+#hamburger-icon span {
+    display: block;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* スマートフォン画面でのヘッダースタイル */
+@media (max-width: 768px) {
+    .navbar-header {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-header.active {
+        display: flex;
+    }
+}
+
+
+.hr {
+    width: 90%; /* 親要素に対して90%の幅 */
+    height: 2px; /* 線の厚さ */
+    background-color: #219851; /* 線の色 */
+    margin: 20px auto; /* 上下の余白と中央揃え */
+    transition: background-color 0.3s; /* 背景色の変化を滑らかに */
+}
+
+.hr:hover {
+    background-color: #f97e12; /* ホバー時に色へ変更 */
+}
+
+
+footer {
+    bottom: 0;
+    left: 0;
+   
+    background-color: #f97e12; /* オレンジ */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+
+    width: 100%;
+
+}
+.logo {
+    width: 35px;
+    height: 34px;
+  }
+
+.senryu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px; /* ヘッダーの高さに応じて調整 */
+    margin-bottom: 60px; /* フッターの高さに応じて調整 */
+}
+
+.senryu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* 各川柳の間隔 */
+}
+
+.senryu-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 40px;
+    font-family: 'Noto Serif JP', serif; /* 明朝体のフォントを指定 */
+}
+
+
+.senryu img, .senryu video {
+    width: 90%; /* 画像のサイズ */
+    max-width: 400px; /* 画像の最大幅 */
+    margin-top: 20px; /* テキストと画像の間隔 */
+}
+
+.iine {
+    margin-top: 10px; /* 「いいね」数値と画像の間隔 */
+    writing-mode: horizontal-tb;
+}
+
+.iine-btn, .delete-btn {
+    font-size: 30px; /* フォントサイズを大きく設定 */
+    padding: 10px 20px; /* タップしやすいようにパディングを追加 */
+    margin: 10px; /* 余白を設定 */
+    width: auto; /* ボタンの幅を内容に合わせて自動調整 */
+    background-color: green;
+    color: rgb(244, 248, 245);
+    border: none; /* 枠線を消去 */
+    border-radius: 5px; /* 角を丸める */
+    cursor: pointer; /* カーソルをポインターに設定 */
+}
+
+.senryu-input {
+    width: 100%; /* 入力枠を大きくする */
+    padding: 10px; /* 内側の余白を増やす */
+    margin-bottom: 10px; /* 下側の余白を増やす */
+    box-sizing: border-box; /* paddingを含めたサイズでwidthを計算 */
+    font-size: 38px;
+
+}
+
+#drop-area {
+    width: 80%; /* ドロップエリアを少し小さくする */
+    height: 30%;
+    margin: auto; /* 中央揃え */
+    padding: 10px;
+    font-size: 26px;
+    border: 2px dashed #f2c487; /* 点線のスタイル */
+    text-align: center;
+}
+#drop-area:hover {
+    background-color: #e9b013;
+}
+
+.file-input-label {
+    color: blue;
+    text-decoration: underline;
+}
+
+#file-name {
+    margin-top: 10px;
+}
+
+.toukou_btn {
+    background-color: green;
+    font-size: 30px; /* フォントサイズを大きく */
+    color: rgb(241, 249, 243);
+    padding: 20px 20px; /* スマートフォンでタップしやすいサイズに */
+    border-radius: 5px;
+    display: block; /* ボタンをブロックレベル要素として扱う */
+    margin: 0 auto; /* 左右中央揃え */
+    cursor: pointer;
+  
+  }
+  
+.toukou_btn:hover {
+    background-color: #e9b013; /* ホバー色を変更 */
+  }
+ 
+
+
+
+@media (max-width: 768px) {
+    .senryu-text, .iine {
+        font-size: 36px;
+    }
+}
+
+
+
